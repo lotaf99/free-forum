@@ -15,10 +15,10 @@ describe('Login Input Component', () => {
     const emailInput = await screen.findByPlaceholderText('your@email.com');
 
     /// Act
-    await userEvent.type(emailInput, 'zeffry.reynando@gmail.com');
+    await userEvent.type(emailInput, 'lotaf@mail.com');
 
     /// Assert
-    expect(emailInput).toHaveValue('zeffry.reynando@gmail.com'); // should be empty
+    expect(emailInput).toHaveValue('lotaf@mail.com'); // should be empty
   });
 
   it('should handle password typing correctly', async () => {
@@ -31,10 +31,10 @@ describe('Login Input Component', () => {
     const passwordInput = await screen.findByPlaceholderText('******');
 
     /// Act
-    await userEvent.type(passwordInput, 'zeffry');
+    await userEvent.type(passwordInput, '123456');
 
     /// Assert
-    expect(passwordInput).toHaveValue('zeffry'); // should be empty
+    expect(passwordInput).toHaveValue('123456'); // should be empty
   });
 
   it('should handle login button click correctly', async () => {
@@ -46,15 +46,15 @@ describe('Login Input Component', () => {
       </BrowserRouter>,
     );
     const emailInput = await screen.findByPlaceholderText('your@email.com');
-    await userEvent.type(emailInput, 'zeffry.reynando@gmail.com');
+    await userEvent.type(emailInput, 'lotaf@mail.com');
     const passwordInput = await screen.findByPlaceholderText('******');
-    await userEvent.type(passwordInput, 'zeffry');
+    await userEvent.type(passwordInput, '123456');
     const loginButton = await screen.findByRole('button', { name: 'Login' });
 
     /// Act
     await userEvent.click(loginButton);
 
     /// Assert
-    expect(mockLogin).toBeCalledWith({ email: 'zeffry.reynando@gmail.com', password: 'zeffry' });
+    expect(mockLogin).toBeCalledWith({ email: 'lotaf@mail.com', password: '123456' });
   });
 });
