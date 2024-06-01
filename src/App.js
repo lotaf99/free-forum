@@ -28,10 +28,10 @@ function App() {
         <Routes>
           {authState.user && (
             <>
-              <Route path="/" element={<HomePage />} />
               <Route path="/thread/:id" element={<ThreadDetailPage />} />
             </>
           )}
+          <Route path="/" element={<HomePage />} />
           <Route path="/leaderboard" element={<LeaderboardPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
