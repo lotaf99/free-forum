@@ -22,8 +22,8 @@ describe('asyncRegister Thunk', () => {
     data: {
       user: {
         id: '1',
-        name: 'Zeffry Reynando',
-        email: 'zeffry.reynando@gmail.com',
+        name: 'Muhammad Latief',
+        email: 'lotaf@mail.com',
         avatar: 'https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50',
       },
     },
@@ -49,9 +49,9 @@ describe('asyncRegister Thunk', () => {
     const dispatch = jest.fn();
 
     await asyncRegister({
-      name: 'Zeffry Reynando',
-      email: 'zeffry.reynando@gmail.com',
-      password: 'zeffry',
+      name: 'Muhammad Latief',
+      email: 'lotaf@mail.com',
+      password: '123456',
     })(dispatch);
     expect(dispatch).toHaveBeenCalledWith(showLoading());
     expect(dispatch).toHaveBeenCalledWith(onLoadingRegister());
@@ -65,9 +65,9 @@ describe('asyncRegister Thunk', () => {
     const dispatch = jest.fn();
 
     await asyncRegister({
-      name: 'Zeffry Reynando',
-      email: 'zeffry.reynando@gmail.com',
-      password: 'zeffry',
+      name: 'Muhammad Latief',
+      email: 'lotaf@mail.com',
+      password: '123456',
     })(dispatch);
 
     expect(dispatch).toHaveBeenCalledWith(showLoading());

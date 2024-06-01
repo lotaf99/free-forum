@@ -23,13 +23,13 @@ describe('Login Spec', () => {
   });
 
   it('should display required email when email is empty', () => {
-    cy.get('input[type="password"]').type('zeffry'); // password
+    cy.get('input[type="password"]').type('123456'); // password
     cy.get('button[type="submit"]').click();
     cy.contains('Email is required').should('be.visible');
   });
 
   it('should display required password when password is empty', () => {
-    cy.get('input[type="email"]').type('zeffry.reynando@gmail.com');
+    cy.get('input[type="email"]').type('lotaf@mail.com');
     cy.get('button[type="submit"]').click();
     cy.contains('Password is required').should('be.visible');
   });
@@ -42,8 +42,8 @@ describe('Login Spec', () => {
   });
 
   it('should redirect to homepage when username and password are correct', () => {
-    cy.get('input[type="email"]').type('zeffry@gmail.com');
-    cy.get('input[type="password"]').type('zeffry');
+    cy.get('input[type="email"]').type('lotaf@mail.com');
+    cy.get('input[type="password"]').type('123456');
     cy.get('button[type="submit"]').click();
     cy.url().should('eq', `${baseUrl}/`);
     cy.get('.home-page').should('be.visible');

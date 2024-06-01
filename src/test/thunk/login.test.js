@@ -13,8 +13,8 @@ import { asyncLogin, onErrorLogin, onLoadingLogin, onSuccessLogin } from '../../
 const fakeLoginSuccessResponse = {
   user: {
     id: 1,
-    name: 'Zeffry Reynando',
-    email: 'zeffry.reynando@gmail.com',
+    name: 'Muhammad Latief',
+    email: 'lotaf@mail.com',
     avatar: 'https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50',
   },
   token: 'token',
@@ -42,7 +42,7 @@ describe('asyncLogin thunk', () => {
     const dispatch = jest.fn();
 
     /// act
-    await asyncLogin({ email: 'zeffry.reynando@gmail.com', password: 'zeffry' })(dispatch);
+    await asyncLogin({ email: 'lotaf@mail.com', password: '123456' })(dispatch);
 
     /// assert
     expect(dispatch).toHaveBeenCalledWith(showLoading());
