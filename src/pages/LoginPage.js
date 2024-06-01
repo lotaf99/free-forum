@@ -19,7 +19,7 @@ function LoginPage() {
       const { message } = payload;
       notifications.show({
         color: 'red',
-        title: 'Login Failed',
+        title: 'Login gagal',
         message,
       });
       setError(message);
@@ -27,7 +27,7 @@ function LoginPage() {
       notifications.show({
         color: 'green',
         title: 'Login',
-        message: 'Login success',
+        message: 'Login berhasil',
       });
       navigate('/');
     }

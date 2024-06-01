@@ -49,7 +49,7 @@ function LeaderboardPage() {
 
   return (
     <Card className="flex flex-col gap-2 my-5">
-      <h2 className="text-center">Peringkat Pengguna</h2>
+      <h2 className="text-center">Peringkat Pengguna Terbaik</h2>
       {data && (
         <div className="grid grid-cols-1 gap-5">
           {data.map((item, index) => (
