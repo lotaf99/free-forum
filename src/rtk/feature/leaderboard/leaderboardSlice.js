@@ -29,7 +29,7 @@ export const leaderboardSlice = createSlice({
   },
 });
 
-export const { onLoadingLeaderboard, onSuccessLeaderboard, onErrorLeaderboard } = leaderboardSlice.actions;
+export const { onSuccessLeaderboard, onErrorLeaderboard } = leaderboardSlice.actions;
 
 // eslint-disable-next-line no-unused-vars
 export const asyncFetchLeaderboard = createAsyncThunk('leaderboard/fetch', async (_, thunkApi) => {
