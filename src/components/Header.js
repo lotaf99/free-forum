@@ -79,7 +79,7 @@ function Header() {
             />
           </div>
         </Link>
-        <Title order={3}>Forum Bebas</Title>
+        <Title order={3}>App Forum Bebas</Title>
         <HeaderDrawer />
         <div className="hidden lg:block">
           <HeaderMenu />

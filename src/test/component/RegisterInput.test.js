@@ -15,10 +15,10 @@ describe('Register Input Component', () => {
     const nameInput = await screen.findByPlaceholderText('Your Name');
 
     /// Act
-    await userEvent.type(nameInput, 'Zeffry Reynando');
+    await userEvent.type(nameInput, 'Muhammad Latief');
 
     /// Assert
-    expect(nameInput).toHaveValue('Zeffry Reynando'); // should be empty
+    expect(nameInput).toHaveValue('Muhammad Latief'); // should be empty
   });
 
   it('should handle username typing correctly', async () => {
@@ -31,10 +31,10 @@ describe('Register Input Component', () => {
     const emailInput = await screen.findByPlaceholderText('your@email.com');
 
     /// Act
-    await userEvent.type(emailInput, 'zeffry.reynando@gmail.com');
+    await userEvent.type(emailInput, 'lotaf@mail.com');
 
     /// Assert
-    expect(emailInput).toHaveValue('zeffry.reynando@gmail.com'); // should be empty
+    expect(emailInput).toHaveValue('lotaf@mail.com'); // should be empty
   });
 
   it('should handle password typing correctly', async () => {
@@ -47,10 +47,10 @@ describe('Register Input Component', () => {
     const passwordInput = await screen.findByPlaceholderText('******');
 
     /// Act
-    await userEvent.type(passwordInput, 'zeffry');
+    await userEvent.type(passwordInput, '12345');
 
     /// Assert
-    expect(passwordInput).toHaveValue('zeffry'); // should be empty
+    expect(passwordInput).toHaveValue('123456'); // should be empty
   });
 
   it('should handle login button click correctly', async () => {
@@ -63,11 +63,11 @@ describe('Register Input Component', () => {
     );
 
     const nameInput = await screen.findByPlaceholderText('Your Name');
-    await userEvent.type(nameInput, 'Zeffry Reynando');
+    await userEvent.type(nameInput, 'Muhammad Latief');
     const emailInput = await screen.findByPlaceholderText('your@email.com');
-    await userEvent.type(emailInput, 'zeffry.reynando@gmail.com');
+    await userEvent.type(emailInput, 'lotaf@mail.com');
     const passwordInput = await screen.findByPlaceholderText('******');
-    await userEvent.type(passwordInput, 'zeffry');
+    await userEvent.type(passwordInput, '123456');
     const registerButton = await screen.findByRole('button', { name: 'Register' });
 
     /// Act
@@ -75,9 +75,9 @@ describe('Register Input Component', () => {
 
     /// Assert
     expect(mockRegister).toBeCalledWith({
-      email: 'zeffry.reynando@gmail.com',
-      password: 'zeffry',
-      name: 'Zeffry Reynando',
+      email: 'lotaf@mail.com',
+      password: '123456',
+      name: 'Muhammad Latief',
     });
   });
 });
