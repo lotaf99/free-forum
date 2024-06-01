@@ -47,7 +47,7 @@ describe('Register Input Component', () => {
     const passwordInput = await screen.findByPlaceholderText('******');
 
     /// Act
-    await userEvent.type(passwordInput, '12345');
+    await userEvent.type(passwordInput, '123456');
 
     /// Assert
     expect(passwordInput).toHaveValue('123456'); // should be empty
